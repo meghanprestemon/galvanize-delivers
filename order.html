@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Galvanize Delivers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://use.fontawesome.com/e17a871278.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css'>
+  <link rel='stylesheet' href='css/style.css'/>
+  <script type="text/javascript" src="js/order.js"></script>
+</head>
+
+<body class="container-fluid">
+  <body data-spy="scroll" data-target=".navbar" data-offset="10">
+
+    <div id="order-error" class="toast">
+      <div id="error" class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+    </div>
+
+    <div id="order-success" class="toast">
+      <div id="success" class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <strong>Success!</strong> Your order has been placed
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="galvanize-logo" class="navbar-brand" href="./index.html"><b>Galvanize Delivers</b></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav-link" id="landing-page" href="./index.html"><b>Home</b></a></li>
+            <li><a class="nav-link" id="order-page" href="./order.html"><b>Place Order</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+<!--BODY OF ORDER PAGE-->
+    <div class="order-body container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+          <h3 class="order-header">Menu</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="burger" class="thumbnail">
+                <img src="./img/burger.jpg" alt="burger and fries">
+                <div class="caption">
+                  <h4 class="order-item">Royale with Cheese</h4>
+                  <p class="price">$8.99</p>
+                  <hr>
+                  <a href="#" class="card-link">ADD TO ORDER</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="pizza" class="thumbnail">
+                <img src="./img/pizza.jpg" alt="arugula pizza">
+                <div class="caption">
+                  <h4 class="order-item">Arugula Pie</h4>
+                  <p class="price">$11.99</p>
+                  <hr>
+                  <a href="#" class="card-link">ADD TO ORDER</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div id="pig" class="thumbnail">
+                <img src="./img/ribs.jpg" alt="smoked swine">
+                <div class="caption">
+                  <h4 class="order-item">Smoked Swine</h4>
+                  <p class="price">$14.99</p>
+                  <hr>
+                  <a href="#" class="card-link">ADD TO ORDER</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="ice-cream" class="thumbnail">
+                <img src="./img/ice_cream.jpg" alt="ice cream">
+                <div class="caption">
+                  <h4 class="order-item">Ice Cream Biscut</h4>
+                  <p class="price">$7.99</p>
+                  <hr>
+                  <a href="#" class="card-link">ADD TO ORDER</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="order-header">Order</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th class="text-right">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+              <tfoot align="right">
+                <tr>
+                  <td>Subtotal</td>
+                  <td id="subtotal">$0.00</td>
+                </tr>
+                <tr>
+                  <td>Tax</td>
+                  <td id="tax">$0.00</td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td id="total">$0.00</td>
+                </tr>
+              </tfoot>
+          </table>
+
+          <form>
+
+            <div class="row">
+              <div class="col-md-1">
+                <span class="glyphicon glyphicon-user" aria-hidden="true" style="font-size:2.25em"></span>
+              </div>
+              <div class="col-md-11">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-1">
+                <span class="glyphicon glyphicon-earphone" aria-hidden="true" style="font-size:2.25em"></span>
+              </div>
+              <div class="col-md-11">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="xxx-xxx-xxxx">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-1">
+                <span class="glyphicon glyphicon-home" aria-hidden="true" style="font-size:2.25em"></span>
+              </div>
+              <div class="col-md-11">
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  <textarea class="form-control" id="address" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 text-center">
+                <button type="button" class="btn btn-primary btn-large" id="order-button">
+                  PLACE ORDER
+                </button>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer">
+      <div class="container">
+        <div class="navbar-footer row">
+          <div class="col-md-3 col-md-offset-1">
+            <h4><a id="footer-logo" href="./index.html"><b>Galvanize Delivers</b></h4>
+            <p><b>Fine dining, delivered.</b></p>
+          </div>
+
+          <nav class="footer-nav">
+            <div class="col-md-3 col-md-offset-3">
+              <p class="footer-link"><a id="footer-home" class="landing-page" href="./index.html"><b>Home</b></a></p>
+              <p class="footer-link"><a id="footer-order" class="order-page" href="./order.html"><b>Place Order</b></a></p>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+        <div id="copyright">
+          <div class=container>
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <p>&copy; 2016 Galvanize Delivers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

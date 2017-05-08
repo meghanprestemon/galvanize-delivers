@@ -1,0 +1,131 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.toast {
+  width: 100%;
+  position: fixed;
+  top: 45%;
+  z-index: 1031;
+  display: none;
+}
+
+.alert {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #1565C0;
+}
+
+#galvanize-logo, #landing-page, #order-page {
+  color: white;
+}
+
+#galvanize-logo:hover, #landing-page:hover, #order-page:hover {
+  text-decoration: none;
+  color: #a8b2c1;
+}
+
+.jumbotron {
+  background-color: grey;
+  background-image: url('../img/hero.jpg');
+  height: 350px;
+  text-align: center;
+}
+
+.jumbotron-text {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.jumbotron-text > h1 {
+  color: white;
+}
+
+.btn {
+  background-color: #FF4081;
+}
+
+a.btn:hover {
+  background-color: #f977a3;
+}
+
+h3 {
+  color: #FF4081;
+}
+
+.description {
+  color: black;
+  padding-bottom: 25px;
+}
+
+.footer {
+  background-color: #1565C0;
+  color: white;
+}
+
+.navbar-footer {
+  padding: 15px 0px;
+}
+
+#footer-logo, #footer-home, #footer-order {
+  color: white;
+}
+
+#footer-logo:hover, #footer-home:hover, #footer-order:hover {
+  text-decoration: none;
+  color: #a8b2c1;
+}
+
+.footer-nav {
+  margin-top: 20px;
+}
+
+.footer-link {
+  margin-bottom: 0px;
+}
+
+#copyright {
+  background-color: #0D47A1;
+  color: white;
+  padding-top: 10px;
+}
+
+/*---------------------------
+         ORDER PAGE
+-----------------------------*/
+.order-body {
+  margin-top: 65px;
+}
+
+.order-header {
+  color: black;
+  margin-bottom: 25px;
+}
+
+#burger, #pizza, #pig, #ice-cream {
+  box-shadow: .25px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail > .caption > a {
+  color: #FF4081;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/*-----ORDER TABLE-----*/
+
+
+/*-----ORDER FORM-----*/
+.glyphicon {
+  margin-top: 11px;
+  color: #FF4081;
+}
+
+#order-button {
+  margin-top: 15px;
+}
